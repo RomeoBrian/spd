@@ -5,7 +5,7 @@ Utn-spd
 
 
 ## Integrantes 
-- Dylan Peralta
+- [Dylan Peralta](https://github.com/Dylan-Peralta/Spd-1H/)
 - Brian Romeo
 
 ## Proyecto: Contador con dos displays de 7 segmentos.
