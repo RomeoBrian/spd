@@ -53,8 +53,6 @@ void manejarDisplay(int contadorNumeros)
 ### Fuentes
 - [Consigna](https://drive.google.com/file/d/1UTj8HBPnR7vM235m1BswtL_SMnmYe8nO/view).
 
-- [Lenguaje Markdown](https://markdown.es/sintaxis-markdown/#linkauto).
-
 - [Guia de uso display 7 segmentos](https://www.youtube.com/watch?v=_Ry7mtURGDE&t=1917s).
 
 ---
