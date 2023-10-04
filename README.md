@@ -55,11 +55,7 @@ void manejarDisplay(int contadorNumeros)
 
 - [Lenguaje Markdown](https://markdown.es/sintaxis-markdown/#linkauto).
 
-- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-
-- [Tutorial](https://www.youtube.com/watch?v=oxaH9CFpeEE).
-
-- [Emojis](https://gist.github.com/rxaviers/7360908).
+- [Guia de uso display 7 segmentos](https://www.youtube.com/watch?v=_Ry7mtURGDE&t=1917s).
 
 ---
 
