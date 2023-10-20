@@ -214,7 +214,7 @@ void loop()
 ### Sensor de temperatura
 ![Sensor de temperatura](./img/Circuito-Sensor-Temperatura.png)
 ### Sensor de temperatura con fotoresistencia
-![Sensor de temperatura](./img/Ciscuito_FotoresistenciaE.PNG)
+![Sensor de temperatura](./img/Ciscuito_fotoresistenciaE.PNG)
 
 ## :tv: Armado del circuito electrico
 - [Contador con 2 display 7 segmentos](https://www.youtube.com/watch?v=jq-v3suBJPo&ab_channel=DylanPeralta)
