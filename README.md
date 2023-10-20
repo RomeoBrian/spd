@@ -14,7 +14,7 @@
 ### Sensor de temperatura.
 ![Proyecto](./img/Sensor-de-Temperatura.png)
 ### Sensor de temperatura con fotoresistencia.
-![Proyecto](./img/ciscuito_fotoresistencia.png)
+![Proyecto](./img/Ciscuito_Fotoresistencia.png)
 
 ## Descripción
 ### Contador con dos displays de 7 segmentos.
@@ -214,7 +214,7 @@ void loop()
 ### Sensor de temperatura
 ![Sensor de temperatura](./img/Circuito-Sensor-Temperatura.png)
 ### Sensor de temperatura con fotoresistencia
-![Sensor de temperatura](./img/ciscuito_fotoresistenciaE.png)
+![Sensor de temperatura](./img/Ciscuito_FotoresistenciaE.png)
 
 ## :tv: Armado del circuito electrico
 - [Contador con 2 display 7 segmentos](https://www.youtube.com/watch?v=jq-v3suBJPo&ab_channel=DylanPeralta)
