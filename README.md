@@ -13,6 +13,8 @@
 ![Proyecto](./img/Swicht.PNG)
 ### Sensor de temperatura.
 ![Proyecto](./img/Sensor-de-Temperatura.png)
+### Sensor de temperatura con fotoresistencia.
+![Proyecto](./img/ciscuito_fotoresistencia.png)
 
 ## Descripción
 ### Contador con dos displays de 7 segmentos.
@@ -23,6 +25,9 @@ El funcionamiento de este proyecto es contar, descontar o resetear dependiendo d
 
 ### Sensor de temperatura.
 El funcionamiento de este proyecto es poder mostrar la temperatura deseada por display de 7 segmentos de -40° a 125°. 
+
+### Sensor de temperatura con fotoresistencia.
+Se le agrega al sensor, la posibilidad de dependiendo la entrada de luz con la fotoresistencia se puda controlar que temperaturas mostrar.
 
 ## Función principal
 
@@ -130,11 +135,76 @@ void loop()
     }
 }
 ~~~
+### Sensor de temperatura con fotoresistencia.
+La fincion en este caso se agrega en el loop la misma toma los valores que puede interpretar con la fotoresistencia y mediante if
+logramos que la temperatura se muestre o no
 
+~~~ C (lenguaje en el que esta escrito)
+void loop()
+{
+    temperaturaTomada = map(analogRead(sensor), 20, 358, -40, 125);
+    centena = temperaturaTomada / 100;
+    decena = (temperaturaTomada - (centena * 100)) / 10;
+    unidad = temperaturaTomada - (centena * 100 + decena * 10);
+	luzEntrante = analogRead(fotoResistencia);
+  
+    displayApagado();
+	
+//Dependiendo de la luz entrante 
+//SE va a definir el umbral de temperaturas a tomar 
+//si la luz entrante supera los niveles 60 
+//se tomaran las temperaturas superiores a 100
+  if(luzEntrante > 60)
+  
+  {
+    if (temperaturaTomada >= 100)
+    {
+        displayCentenaFunction();
+        sevenDisplay(centena);
+
+        displayDecenaFunction();
+        sevenDisplay(decena);
+
+        displayUnidadFunction();
+        sevenDisplay(unidad);
+    }
+  }
+//Si la luz entrante esta en el umbral entre 30 y 60
+//se mostraran las temperaturas desde 0 a 100
+  if(luzEntrante > 30 && luzEntrante< 60)
+  {
+    if (temperaturaTomada >= 0 && temperaturaTomada <= 100)
+    {
+        displayApagado();
+        displayDecenaFunction();
+        sevenDisplay(decena);
+        displayUnidadFunction();
+        sevenDisplay(unidad);
+    }
+  }
+//Por ultimo si la luz entrante esta en el umbral de 0 a 30
+// la temperatura a mostrar seran las negativas
+  if(luzEntrante >= 0 && luzEntrante< 30)
+  {
+    if (temperaturaTomada < 0)
+    {
+        displayCentenaFunction();
+        sevenDisplay(-1);
+
+        displayDecenaFunction();
+        sevenDisplay(abs(decena));
+
+        displayUnidadFunction();
+        sevenDisplay(abs(unidad));
+    }
+  }
+}
+~~~
 ## :robot: Link del proyecto
 - [Contador con 2 display 7 segmentos](https://www.tinkercad.com/things/4o4MSXtLEbl)
 - [Contador y numeros primos con Swicht](https://www.tinkercad.com/things/936vb1Llbhp)
 - [Sensor de temperatura](https://www.tinkercad.com/things/2xuGhtuZf7x)
+- [Sensor de temperatura con fotoresistencia](https://www.tinkercad.com/things/7ZuiWBMPjne)
  
 ## Vista Esquematica 
 ### Vista Esquematica Contador con 2 display 7 segmentos
@@ -143,6 +213,8 @@ void loop()
 ![Contador y numeros primos con Swicht](./img/Vista-esquematica-Swicht.PNG)
 ### Sensor de temperatura
 ![Sensor de temperatura](./img/Circuito-Sensor-Temperatura.png)
+### Sensor de temperatura con fotoresistencia
+![Sensor de temperatura](./img/ciscuito_fotoresistenciaE.png)
 
 ## :tv: Armado del circuito electrico
 - [Contador con 2 display 7 segmentos](https://www.youtube.com/watch?v=jq-v3suBJPo&ab_channel=DylanPeralta)
