@@ -9,7 +9,7 @@ Utn-spd
 - Brian Romeo
 
 ## Proyecto: 
-# Contador con dos displays de 7 segmentos.
+### Contador con dos displays de 7 segmentos.
 ![Proyecto](./img/Contador.png)
 
 
